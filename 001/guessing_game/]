@@ -1,0 +1,13 @@
+use std::io::write;
+
+fn main() {
+    let mut guess = String::new();
+    println!("Welcome to guessing number game!");
+    println!("Please input the number: ");
+    let _ = io::stdout().flush();
+    io::stdin()
+        .read_line(&mut guess)
+        .expect("Failed to read line");
+
+    println!("You guess: {}", guess);
+}
