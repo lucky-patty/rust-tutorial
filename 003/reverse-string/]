@@ -1,0 +1,23 @@
+//use unicode_segmentation::UnicodeSegmentation;
+
+pub fn reverse(input: &str) -> String {
+    // Remove the first solution since the bot does not has dependency
+    //    return input.graphemes(true).rev().collect::<String>();
+    //
+    
+    if input.is_empty() {
+        return String::new();
+    }
+
+    let mut chars: Vec<char> = input.chars().collect();
+    let mut left = 0;
+    let mut rifght = chars.len()-1;
+
+    while left < right {
+        chars.swap(left,right);
+        left += 1;
+        right -= 1;
+    }
+
+    return chars.into_iter().collect();
+}
